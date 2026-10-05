@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <title>Word Guess - Login</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="center-page">
+<div class="card auth-card">
+    <h1>Word Guess Game</h1>
+    <p class="muted">Login to play.</p>
+    <form id="loginForm">
+        <label>Username</label>
+        <input id="username" required autocomplete="username">
+        <label>Password</label>
+        <input id="password" type="password" required autocomplete="current-password">
+        <button type="submit">Login</button>
+    </form>
+    <p id="message" class="message"></p>
+    <p class="muted">New player? <a href="/register">Create an account</a></p>
+</div>
+<script src="/static/js/auth.js"></script>
+</body>
+</html>

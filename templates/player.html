@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <title>Word Guess - Player</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<header class="topbar">
+    <div><strong>Word Guess Game</strong></div>
+    <button id="logoutBtn" class="secondary">Logout</button>
+</header>
+<main class="game-page">
+    <section class="card game-card">
+        <div class="game-head">
+            <div>
+                <h1>Guess the Word</h1>
+                <p class="muted">You can start at most 3 games per day. Each game has at most 5 guesses.</p>
+            </div>
+            <div class="quota">Games left today: <span id="gamesLeft">-</span></div>
+        </div>
+
+        <button id="startBtn">Start New Game</button>
+        <div id="gameArea" class="hidden">
+            <div class="attempts">Guesses left: <span id="guessesLeft">5</span></div>
+            <div id="board" class="board"></div>
+            <form id="guessForm" class="guess-form">
+                <input id="guessInput" maxlength="5" pattern="[A-Za-z]{5}" autocomplete="off" aria-label="Five letter guess">
+                <button type="submit">Submit Guess</button>
+            </form>
+            <p class="muted">Enter a 5-letter word. The board will keep all earlier guesses in order.</p>
+        </div>
+        <p id="gameMessage" class="message"></p>
+    </section>
+</main>
+<script src="/static/js/game.js"></script>
+</body>
+</html>

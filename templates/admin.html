@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <title>Word Guess - Admin</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<header class="topbar">
+    <div><strong>Word Guess Game - Admin</strong></div>
+    <button id="logoutBtn" class="secondary">Logout</button>
+</header>
+<main class="admin-page">
+    <section class="card">
+        <h1>Admin Dashboard</h1>
+        <div class="report-grid">
+            <div class="report-box">
+                <h2>Day Report</h2>
+                <label>Date</label>
+                <input id="dayDate" type="date">
+                <button id="dayReportBtn">Run Day Report</button>
+                <div id="dayResult" class="report-result"></div>
+            </div>
+            <div class="report-box">
+                <h2>User Report</h2>
+                <label>Username</label>
+                <input id="reportUsername" placeholder="Player username">
+                <button id="userReportBtn">Run User Report</button>
+                <div id="userResult" class="report-result"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="card words-card">
+        <div class="section-head">
+            <div>
+                <h2>Game Words</h2>
+                <p class="muted">These are the 5-letter words currently stored in SQLite.</p>
+            </div>
+            <span class="quota">Total words: <span id="wordCount">0</span></span>
+        </div>
+
+        <div class="add-word-form">
+            <input id="wordInput" maxlength="5" pattern="[A-Za-z]{5}" placeholder="Enter 5-letter word" autocomplete="off">
+            <button id="addWordBtn">Add Word</button>
+        </div>
+        <p id="wordMessage" class="message"></p>
+        <div id="wordList" class="word-list"></div>
+    </section>
+</main>
+<script src="/static/js/admin.js"></script>
+</body>
+</html>

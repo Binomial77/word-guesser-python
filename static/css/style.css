@@ -1,0 +1,58 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f4f6f8; color: #222; }
+button, input { font: inherit; }
+a { color: #1f5da8; }
+.center-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.card { background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,.08); padding: 28px; }
+.auth-card { width: 100%; max-width: 430px; }
+.auth-card h1 { margin-top: 0; }
+label { display: block; font-weight: 600; margin: 16px 0 7px; }
+input { width: 100%; border: 1px solid #c9ced6; border-radius: 8px; padding: 11px 12px; background: #fff; }
+button { border: 0; border-radius: 8px; padding: 11px 17px; background: #333; color: white; cursor: pointer; margin-top: 18px; }
+button:hover { opacity: .9; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+button.secondary { background: #666; margin: 0; }
+.muted { color: #68707a; }
+.message { min-height: 24px; margin-top: 14px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 16px 24px; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+.game-page, .admin-page { max-width: 900px; margin: 30px auto; padding: 0 16px; }
+.game-card h1, .card > h1 { margin-top: 0; }
+.game-head { display: flex; gap: 20px; justify-content: space-between; align-items: flex-start; }
+.quota { font-weight: 700; padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px; white-space: nowrap; }
+.attempts { margin: 20px 0 10px; font-weight: 700; }
+.board { width: 300px; max-width: 100%; display: grid; grid-template-columns: repeat(5, 1fr); gap: 7px; margin: 20px auto; }
+.tile { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: 800; border: 2px solid #d3d6da; background: #fff; }
+.tile.correct { background: #6aaa64; color: #fff; border-color: #6aaa64; }
+.tile.present { background: #f3b33e; color: #fff; border-color: #f3b33e; }
+.tile.absent { background: #787c7e; color: #fff; border-color: #787c7e; }
+.guess-form { display: flex; gap: 10px; max-width: 520px; margin: 0 auto; }
+.guess-form input { text-align: center; text-transform: uppercase; letter-spacing: 8px; font-size: 24px; font-weight: 700; }
+.guess-form button { margin: 0; }
+.hidden { display: none; }
+.report-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.report-box { border: 1px solid #e0e4e8; border-radius: 10px; padding: 18px; }
+.report-box h2 { margin-top: 0; }
+.report-result { margin-top: 18px; overflow-x: auto; }
+.report-table { width: 100%; border-collapse: collapse; }
+.report-table th, .report-table td { border: 1px solid #d9dde2; padding: 9px; text-align: left; }
+.report-table th { background: #f0f2f4; }
+.metric { font-size: 20px; margin: 10px 0; }
+@media (max-width: 700px) {
+    .game-head, .report-grid { grid-template-columns: 1fr; display: grid; }
+    .guess-form { flex-direction: column; }
+    .guess-form button { width: 100%; }
+}
+
+.words-card { margin-top: 22px; }
+.section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+.section-head h2 { margin-top: 0; margin-bottom: 6px; }
+.add-word-form { display: flex; gap: 10px; max-width: 520px; }
+.add-word-form input { text-transform: uppercase; letter-spacing: 3px; font-weight: 700; }
+.add-word-form button { margin: 0; }
+.word-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.word-chip { display: inline-flex; align-items: center; justify-content: center; min-width: 80px; padding: 9px 12px; border: 1px solid #d9dde2; border-radius: 8px; background: #f7f8f9; font-weight: 700; letter-spacing: 1px; }
+@media (max-width: 700px) {
+    .add-word-form { flex-direction: column; }
+    .add-word-form button { width: 100%; }
+    .section-head { display: grid; }
+}
